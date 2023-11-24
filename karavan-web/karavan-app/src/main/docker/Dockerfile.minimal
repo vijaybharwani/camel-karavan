@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM eclipse-temurin:17-jdk-ubi9-minimal
+FROM --platform=linux/amd64 eclipse-temurin:17-jdk-ubi9-minimal
 RUN mkdir /opt/app
 COPY target/*-runner.jar /opt/app/karavan.jar
 ENV JAVA_OPTS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"

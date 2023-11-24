@@ -13,15 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM maven:3.9.3-eclipse-temurin-17
+FROM --platform=linux/amd64 maven:3.9.3-eclipse-temurin-17
 
 LABEL "org.opencontainers.image.title"="karavan-devmode"
 LABEL "org.opencontainers.image.description"="Apache Camel Karavan DevMode"
 LABEL "org.opencontainers.image.url"="https://camel.apache.org"
 LABEL "org.opencontainers.image.licenses"="Apache 2.0"
-LABEL "org.opencontainers.image.version"="4.1.1"
+LABEL "org.opencontainers.image.version"="4.2.1"
 
-RUN apt-get update && apt-get install git && apt-get clean
+RUN apt-get update && apt-get install git && apt-get install amazon-ecr-credential-helper --assume-yes && apt-get clean
 
 ENV JBANG_VERSION=0.110.0
 ENV CAMEL_VERSION=4.1.0

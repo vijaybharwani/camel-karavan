@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY: ghcr.io
+  REGISTRY: docker.io/vijaybharwani
   IMAGE_NAME: ${{ github.repository }}-devmode
-  TAG: 4.1.1
+  TAG: 4.2.1
 
 jobs:
   build:

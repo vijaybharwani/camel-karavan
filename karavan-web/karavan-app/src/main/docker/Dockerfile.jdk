@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM eclipse-temurin:17-jdk
+FROM --platform=linux/amd64 eclipse-temurin:17-jdk
 
 LABEL "org.opencontainers.image.title"="karavan"
 LABEL "org.opencontainers.image.description"="Apache Camel Karavan"

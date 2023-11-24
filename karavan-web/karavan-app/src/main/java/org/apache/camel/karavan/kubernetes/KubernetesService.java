@@ -242,7 +242,7 @@ public class KubernetesService implements HealthCheck {
 
         Container container = new ContainerBuilder()
                 .withName(name)
-                .withImage("ghcr.io/apache/camel-karavan-devmode:" + version)
+                .withImage("docker.io/vijaybharwani/karavan-devmode:" + version)
                 .withPorts(port)
                 .withImagePullPolicy("Always")
                 .withEnv(envVars)
@@ -422,7 +422,7 @@ public class KubernetesService implements HealthCheck {
 
         Container container = new ContainerBuilder()
                 .withName(name)
-                .withImage("ghcr.io/apache/camel-karavan-devmode:" + version)
+                .withImage("docker.io/vijaybharwani/karavan-devmode:" + version)
                 .withPorts(port)
                 .withResources(resources)
                 .withImagePullPolicy("Always")
