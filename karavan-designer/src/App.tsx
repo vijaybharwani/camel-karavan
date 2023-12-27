@@ -33,7 +33,6 @@ import {ComponentApi} from "karavan-core/lib/api/ComponentApi";
 import {BlueprintIcon} from "@patternfly/react-icons";
 import KnowledgebaseIcon from "@patternfly/react-icons/dist/js/icons/book-open-icon";
 import TopologyIcon from "@patternfly/react-icons/dist/js/icons/topology-icon";
-import {KaravanIcon} from "./designer/icons/KaravanIcons";
 import './designer/karavan.css';
 import {DesignerPage} from "./DesignerPage";
 import {TemplateApi} from "karavan-core/lib/api/TemplateApi";
@@ -134,19 +133,12 @@ class App extends React.Component<Props, State> {
             new MenuItem("topology", "Topology", <TopologyIcon/>),
             new MenuItem("knowledgebase", "Knowledgebase", <KnowledgebaseIcon/>),
         ]
-        return (<Flex className="nav-buttons" direction={{default: "column"}} style={{height: "100%"}}
+        return (<Flex className="nav-buttons" direction={{default: "column"}} style={{height: "100%", background: '#3785C9', width: 50}}
                       spaceItems={{default: "spaceItemsNone"}}>
-            <FlexItem alignSelf={{default: "alignSelfCenter"}}>
-                <Tooltip className="logo-tooltip" content={"Apache Camel Karavan"}
-                         position={"right"}>
-                    {KaravanIcon()}
-                </Tooltip>
-            </FlexItem>
             {pages.map(page =>
                 <FlexItem key={page.pageId} className={pageId === page.pageId ? "nav-button-selected" : ""}>
                     <Tooltip content={page.tooltip} position={"right"}>
-                        <Button id={page.pageId} icon={page.icon} variant={"plain"}
-                                className={pageId === page.pageId ? "nav-button-selected" : ""}
+                        <Button id={page.pageId} icon={<div className="icon-container">{page.icon}</div>} variant={"plain"} width={'100%'}
                                 onClick={event => this.setState({pageId: page.pageId})}
                         />
                     </Tooltip>

@@ -21,11 +21,11 @@ import {
     Flex,
     FlexItem,
     Tooltip,
-    Divider, Popover, Badge, Spinner, Bullseye
+    Divider, Popover, Badge
 } from '@patternfly/react-core';
 import {KaravanApi} from "../api/KaravanApi";
 import '../designer/karavan.css';
-import Icon from "./Logo";
+
 import UserIcon from "@patternfly/react-icons/dist/js/icons/user-icon";
 import ProjectsIcon from "@patternfly/react-icons/dist/js/icons/repository-icon";
 import TemplatesIcon from "@patternfly/react-icons/dist/js/icons/blueprint-icon";
@@ -76,16 +76,6 @@ export function PageNavigation () {
 
     return (<Flex className="nav-buttons" direction={{default: "column"}} style={{height: "100%"}}
                   spaceItems={{default: "spaceItemsNone"}}>
-        <FlexItem alignSelf={{default: "alignSelfCenter"}}>
-            <Bullseye>
-                {loading && <Spinner style={{position: "absolute"}} diameter="40px" aria-label="Loading..."/>}
-                <Tooltip className="logo-tooltip" content={config.title + " " + config.version}
-                         position={"right"}>
-                    {Icon()}
-                </Tooltip>
-            </Bullseye>
-
-        </FlexItem>
         {getMenu().map(page =>
             <FlexItem key={page.pageId} className={pageId === page.pageId ? "nav-button-selected" : ""}>
                 <Tooltip content={page.tooltip} position={"right"}>

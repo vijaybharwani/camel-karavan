@@ -39,10 +39,6 @@ body,
   margin-right: 10px;
 }
 
-.karavan .nav-buttons {
-  background: var(--pf-v5-c-page__header--BackgroundColor);
-}
-
 .karavan .nav-buttons .logo {
   margin-top: 16px;
   margin-bottom: 10px;
@@ -51,14 +47,17 @@ body,
 }
 
 .karavan .nav-buttons .pf-v5-c-button {
-  padding: 0;
-  width: 64px;
-  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   color: var(--pf-v5-global--Color--light-100);
 }
 
-.karavan .nav-buttons .pf-v5-c-button svg {
-  width: 24px;
+.karavan .nav-buttons svg {
+  width: 28px;
+  height: 28px;
 }
 
 .karavan .nav-buttons .avatar {
@@ -71,14 +70,19 @@ body,
   padding: 6px;
 }
 
-.karavan .nav-buttons .pf-v5-c-button.pf-m-plain {
-  border-left-width: 3px;
-  border-left-style: solid;
-  border-left-color: transparent;
-  border-radius: 0;
+.icon-container {
+  display: flex;
+  width: min-content;
+  height: min-content;
+  border-radius: 8px;
+  padding: 5px;
+  transition: all 0.1s ease;
 }
 
-.karavan .nav-button-selected .pf-v5-c-button.pf-m-plain {
-  border-left-color: var(--pf-v5-global--active-color--400);
-  background-color: var(--pf-v5-global--BackgroundColor--dark-400);
+.icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-button-selected .icon-container {
+  background-color: rgba(255, 255, 255, 0.3);
 }

@@ -62,7 +62,7 @@ export function MainLoader() {
             <Bullseye className="">
                 <Flex direction={{default:"column"}} justifyContent={{default: "justifyContentCenter"}}>
                     <FlexItem style={{textAlign: "center"}}>
-                        {Icon()}
+                        <Icon />
                         <TextContent>
                             <Text component={TextVariants.h2}>
                                 Waiting for services
@@ -94,9 +94,9 @@ export function MainLoader() {
     function getSpinner() {
         return (
             <Bullseye className="loading-page">
-                <Spinner className="spinner" diameter="140px" aria-label="Loading..."/>
+                <Spinner className="spinner" diameter="140px" aria-label="Loading..." />
                 <Tooltip content="Connecting to server..." position={TooltipPosition.bottom}>
-                    <div className="logo-placeholder">{Icon()}</div>
+                    <Icon size={70} fill="#226291" />
                 </Tooltip>
             </Bullseye>
         )

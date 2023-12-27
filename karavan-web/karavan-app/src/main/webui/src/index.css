@@ -14,6 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap");
+
+ :root {
+  --pf-v5-global--primary-color--100: #4fc7e7;
+  --pf-v5-global--primary-color--100--hover: #226291;
+
+  --pf-v5-global--primary-color--dark-100: #226291;
+
+  --pf-v5-global--active-color--100: #226291;
+
+  --pf-v5-global--active-color--400: #4fc7e7;
+
+  --pf-v5-global--FontFamily--text: 'Fira Sans', sans-serif;
+  --pf-v5-global--FontFamily--heading: 'Fira Sans', sans-serif;
+  --pf-v5-global--FontFamily--monospace: 'Fira Sans', sans-serif;
+  --pf-v5-global--FontFamily--text--vf: 'Fira Sans', sans-serif;
+  --pf-v5-global--FontFamily--heading--vf: 'Fira Sans', sans-serif;
+  --pf-v5-global--FontFamily--monospace--vf: 'Fira Sans', sans-serif;
+
+}
+
+.pf-v5-c-spinner .pf-v5-c-spinner__path {
+   stroke: #226291
+ }
 
 #root {
   margin: 0;
